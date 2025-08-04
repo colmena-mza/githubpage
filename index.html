@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colmena - Tu Nido de Creatividad Digital</title>
+    <!-- Carga de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuración de Tailwind para usar colores personalizados si es necesario, y la fuente Inter -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'colmena-yellow': '#FFD700', // Un amarillo vibrante, como una abeja
+                        'colmena-dark': '#333333', // Para texto o fondos oscuros
+                        'colmena-light': '#F8F8F8', // Para fondos claros
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Enlace a la fuente Inter de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth; /* Para un desplazamiento suave al hacer clic en los enlaces de navegación */
+        }
+    </style>
+</head>
+<body class="font-sans bg-colmena-light text-colmena-dark">
+
+    <!-- Barra de Navegación -->
+    <nav class="bg-colmena-yellow p-4 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <a href="#inicio" class="text-colmena-dark text-3xl font-bold rounded-lg p-2 hover:bg-yellow-500 transition duration-300">Colmena</a>
+            <div class="mt-4 md:mt-0 space-x-4 flex flex-wrap justify-center">
+                <a href="#inicio" class="text-colmena-dark hover:text-colmena-dark font-semibold px-4 py-2 rounded-lg hover:bg-yellow-500 transition duration-300">Inicio</a>
+                <a href="#portafolio" class="text-colmena-dark hover:text-colmena-dark font-semibold px-4 py-2 rounded-lg hover:bg-yellow-500 transition duration-300">Portafolio</a>
+                <a href="#clientes" class="text-colmena-dark hover:text-colmena-dark font-semibold px-4 py-2 rounded-lg hover:bg-yellow-500 transition duration-300">Clientes</a>
+                <a href="#contacto" class="text-colmena-dark hover:text-colmena-dark font-semibold px-4 py-2 rounded-lg hover:bg-yellow-500 transition duration-300">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección de Inicio (Hero) -->
+    <section id="inicio" class="relative bg-gradient-to-br from-colmena-yellow to-yellow-600 text-white py-20 md:py-32 flex items-center justify-center min-h-screen-75">
+        <div class="absolute inset-0 bg-cover bg-center opacity-20" style="background-image: url('https://placehold.co/1920x1080/FFD700/FFFFFF/png?text=Fondo+Colmena');"></div>
+        <div class="container mx-auto text-center relative z-10 p-4">
+            <img src="https://placehold.co/200x200/FFD700/FFFFFF/png?text=Logo+Colmena" alt="Logo de Colmena" class="mx-auto mb-6 rounded-full shadow-xl animate-pulse">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-4 drop-shadow-lg">Colmena</h1>
+            <p class="text-xl md:text-3xl font-light mb-8 drop-shadow">Tu nido de creatividad digital para florecer en el mundo online.</p>
+            <a href="#contacto" class="bg-colmena-dark text-colmena-yellow hover:bg-gray-800 px-8 py-4 rounded-full text-lg font-bold shadow-xl transition duration-300 transform hover:scale-105">¡Hablemos de tu proyecto!</a>
+        </div>
+    </section>
+
+    <!-- Sección Quiénes Somos -->
+    <section id="quienes-somos" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-8 text-colmena-dark">Quiénes Somos</h2>
+            <p class="text-lg md:text-xl leading-relaxed max-w-3xl mx-auto text-gray-700">
+                En <strong class="text-colmena-yellow">Colmena</strong>, somos un equipo multidisciplinario de profesionales apasionados por la fotografía y el marketing digital. Nos inspiramos en la eficiencia y el trabajo colaborativo de una colmena, donde cada miembro aporta una habilidad única para crear soluciones integrales y potenciar tu marca.
+            </p>
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-6 bg-colmena-light rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
+                    <h3 class="text-2xl font-semibold mb-3 text-colmena-yellow">Visión</h3>
+                    <p class="text-gray-600">Ser el aliado estratégico que impulse el crecimiento de tu marca en el ecosistema digital.</p>
+                </div>
+                <div class="p-6 bg-colmena-light rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
+                    <h3 class="text-2xl font-semibold mb-3 text-colmena-yellow">Misión</h3>
+                    <p class="text-gray-600">Ofrecer soluciones creativas y efectivas en fotografía y marketing, adaptadas a tus necesidades.</p>
+                </div>
+                <div class="p-6 bg-colmena-light rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
+                    <h3 class="text-2xl font-semibold mb-3 text-colmena-yellow">Valores</h3>
+                    <p class="text-gray-600">Colaboración, Innovación, Calidad y Compromiso con nuestros clientes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Nuestros Servicios -->
+    <section id="servicios" class="py-16 md:py-24 bg-colmena-dark text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-12 text-colmena-yellow">Nuestros Servicios</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Servicio de Fotografía -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
+                    <div class="text-colmena-yellow text-6xl mb-4">📸</div>
+                    <h3 class="text-3xl font-semibold mb-4 text-white">Fotografía Profesional</h3>
+                    <p class="text-lg leading-relaxed text-gray-300">
+                        Capturamos la esencia de tu marca, productos y momentos especiales con imágenes de alta calidad que cuentan tu historia. Desde retratos corporativos hasta fotografía de producto y eventos, cada imagen está pensada para impactar.
+                    </p>
+                    <ul class="mt-6 text-left text-gray-400 list-disc list-inside">
+                        <li>Fotografía de Producto y E-commerce</li>
+                        <li>Retratos Corporativos y de Marca Personal</li>
+                        <li>Cobertura de Eventos y Conferencias</li>
+                        <li>Fotografía de Arquitectura e Interiores</li>
+                    </ul>
+                </div>
+                <!-- Servicio de Marketing Digital -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
+                    <div class="text-colmena-yellow text-6xl mb-4">📈</div>
+                    <h3 class="text-3xl font-semibold mb-4 text-white">Marketing Digital Estratégico</h3>
+                    <p class="text-lg leading-relaxed text-gray-300">
+                        Diseñamos y ejecutamos campañas de marketing digital personalizadas para aumentar tu visibilidad, atraer a tu audiencia ideal y convertirla en clientes leales.
+                    </p>
+                    <ul class="mt-6 text-left text-gray-400 list-disc list-inside">
+                        <li>Estrategia de Contenidos y Redes Sociales</li>
+                        <li>Gestión de Publicidad Online (SEM, Social Ads)</li>
+                        <li>Optimización SEO y Posicionamiento Web</li>
+                        <li>Email Marketing y Automatización</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Portafolio -->
+    <section id="portafolio" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-12 text-colmena-dark">Nuestro Portafolio</h2>
+            <p class="text-lg md:text-xl mb-10 text-gray-700">Una muestra de nuestros trabajos más recientes y destacados.</p>
+
+            <!-- Galería de Imágenes (Ejemplo) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-colmena-light rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src="https://placehold.co/600x400/FFD700/FFFFFF/png?text=Producto+X" alt="Fotografía de Producto X" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2 text-colmena-dark">Fotografía de Producto</h3>
+                        <p class="text-gray-600">Imágenes de alta calidad para e-commerce y catálogos.</p>
+                    </div>
+                </div>
+                <div class="bg-colmena-light rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src="https://placehold.co/600x400/FFD700/FFFFFF/png?text=Retrato+Empresarial" alt="Retrato Empresarial" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2 text-colmena-dark">Retratos Corporativos</h3>
+                        <p class="text-gray-600">Profesionalismo y personalidad en cada toma.</p>
+                    </div>
+                </div>
+                <div class="bg-colmena-light rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src="https://placehold.co/600x400/FFD700/FFFFFF/png?text=Evento+Corporativo" alt="Evento Corporativo" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2 text-colmena-dark">Cobertura de Eventos</h3>
+                        <p class="text-gray-600">Capturando los momentos clave de tus celebraciones.</p>
+                    </div>
+                </div>
+                <div class="bg-colmena-light rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src="https://placehold.co/600x400/FFD700/FFFFFF/png?text=Campaña+Digital" alt="Campaña Digital" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2 text-colmena-dark">Campaña de Marketing</h3>
+                        <p class="text-gray-600">Diseño y ejecución de estrategias digitales exitosas.</p>
+                    </div>
+                </div>
+                <div class="bg-colmena-light rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src="https://placehold.co/600x400/FFD700/FFFFFF/png?text=Diseño+Gráfico" alt="Diseño Gráfico" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2 text-colmena-dark">Diseño Gráfico</h3>
+                        <p class="text-gray-600">Identidad visual y piezas gráficas que impactan.</p>
+                    </div>
+                </div>
+                <div class="bg-colmena-light rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src="https://placehold.co/600x400/FFD700/FFFFFF/png?text=Social+Media" alt="Social Media" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2 text-colmena-dark">Gestión de Redes Sociales</h3>
+                        <p class="text-gray-600">Contenido atractivo para conectar con tu audiencia.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonios -->
+            <div class="mt-20">
+                <h3 class="text-3xl font-bold mb-8 text-colmena-dark">Lo que nuestros clientes dicen de Colmena</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-colmena-yellow p-8 rounded-xl shadow-lg text-colmena-dark">
+                        <p class="italic text-lg mb-4">"El equipo de Colmena superó nuestras expectativas. La calidad de las fotos y la estrategia de marketing fueron excepcionales. ¡Totalmente recomendados!"</p>
+                        <p class="font-semibold">- Ana Pérez, CEO de Moda Viva</p>
+                    </div>
+                    <div class="bg-colmena-yellow p-8 rounded-xl shadow-lg text-colmena-dark">
+                        <p class="italic text-lg mb-4">"Profesionalismo y creatividad en cada paso. Colmena nos ayudó a darle un giro increíble a nuestra presencia digital."</p>
+                        <p class="font-semibold">- Carlos Gómez, Director de Tech Solutions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Clientes (Acceso a Entregas) -->
+    <section id="clientes" class="py-16 md:py-24 bg-colmena-dark text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-8 text-colmena-yellow">Acceso para Clientes</h2>
+            <p class="text-lg md:text-xl leading-relaxed max-w-3xl mx-auto mb-10 text-gray-300">
+                ¡Bienvenido/a a tu galería privada! Aquí podrás acceder y descargar las fotografías de tu proyecto con <strong class="text-colmena-yellow">Colmena</strong>.
+                Para acceder, por favor, haz clic en el enlace correspondiente a tu proyecto que te hemos proporcionado.
+            </p>
+
+            <div class="flex flex-col items-center space-y-6">
+                <!-- Ejemplo de acceso para un cliente. En Google Sites, esto sería un botón que enlaza a una carpeta de Drive. -->
+                <a href="https://drive.google.com/drive/folders/YOUR_CLIENT_FOLDER_ID_1" target="_blank" class="bg-colmena-yellow text-colmena-dark hover:bg-yellow-500 px-8 py-4 rounded-full text-lg font-bold shadow-xl transition duration-300 transform hover:scale-105 flex items-center space-x-2">
+                    <span>Acceder a Galería Cliente A</span>
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd"></path></svg>
+                </a>
+                <a href="https://drive.google.com/drive/folders/YOUR_CLIENT_FOLDER_ID_2" target="_blank" class="bg-colmena-yellow text-colmena-dark hover:bg-yellow-500 px-8 py-4 rounded-full text-lg font-bold shadow-xl transition duration-300 transform hover:scale-105 flex items-center space-x-2">
+                    <span>Acceder a Galería Cliente B</span>
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd"></path></svg>
+                </a>
+                <p class="text-sm text-gray-400 mt-4">
+                    *Recuerda que estos enlaces son ejemplos. Deberás reemplazarlos con los enlaces reales a tus carpetas de Google Drive compartidas con cada cliente.*
+                </p>
+            </div>
+            <p class="text-md text-gray-400 mt-10">
+                Una vez en Google Drive, selecciona las imágenes que deseas descargar o haz clic derecho sobre la carpeta completa y elige 'Descargar'.
+            </p>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-8 text-colmena-dark">Contáctanos</h2>
+            <p class="text-lg md:text-xl leading-relaxed max-w-3xl mx-auto mb-10 text-gray-700">
+                ¿Listo para que tu marca florezca? ¡Envíanos un mensaje y hablemos de tu próximo proyecto!
+            </p>
+
+            <form id="contactForm" class="max-w-xl mx-auto bg-colmena-light p-8 rounded-xl shadow-lg">
+                <div class="mb-6 text-left">
+                    <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Nombre Completo</label>
+                    <input type="text" id="name" name="name" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-colmena-yellow" placeholder="Tu Nombre" required>
+                </div>
+                <div class="mb-6 text-left">
+                    <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-colmena-yellow" placeholder="tu@email.com" required>
+                </div>
+                <div class="mb-6 text-left">
+                    <label for="phone" class="block text-gray-700 text-sm font-bold mb-2">Teléfono (Opcional)</label>
+                    <input type="tel" id="phone" name="phone" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-colmena-yellow" placeholder="+54 9 11 1234 5678">
+                </div>
+                <div class="mb-6 text-left">
+                    <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Tu Mensaje</label>
+                    <textarea id="message" name="message" rows="6" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-colmena-yellow" placeholder="Cuéntanos sobre tu proyecto y cómo podemos ayudarte..." required></textarea>
+                </div>
+                <button type="submit" class="bg-colmena-yellow text-colmena-dark hover:bg-yellow-500 px-8 py-4 rounded-full text-lg font-bold shadow-xl transition duration-300 transform hover:scale-105">
+                    Enviar Mensaje
+                </button>
+                <div id="formMessage" class="mt-4 text-sm font-semibold text-green-600 hidden"></div>
+            </form>
+
+            <div class="mt-12 text-center">
+                <h3 class="text-2xl font-bold mb-4 text-colmena-dark">Nuestros Datos</h3>
+                <p class="text-lg text-gray-700">Email: <a href="mailto:info@colmena.com" class="text-colmena-yellow hover:underline">info@colmena.com</a></p>
+                <p class="text-lg text-gray-700">Teléfono: +54 9 261 1234 567 (Ejemplo)</p>
+                <div class="flex justify-center space-x-6 mt-6">
+                    <a href="#" class="text-colmena-dark hover:text-colmena-yellow transition duration-300 text-3xl">
+                        <!-- Icono de Instagram (ejemplo) -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4c0 3.2-2.6 5.8-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8C2 4.6 4.6 2 7.8 2m-.2 2A4.8 4.8 0 0 0 3 7.6v8.8C3 19.4 4.6 21 7.6 21h8.8c3 0 4.6-1.6 4.6-4.4V7.6C21 4.6 19.4 3 16.4 3H7.6m.2 2h8.4C19 5 21 7 21 9.8v4.4c0 2.8-2 4.8-4.8 4.8H7.8C5 19 3 17 3 14.2V9.8C3 7 5 5 7.8 5m4.2 3.8A4.2 4.2 0 1 0 16.2 12a4.2 4.2 0 0 0-4.2-4.2m0 2a2.2 2.2 0 1 1 0 4.4a2.2 2.2 0 0 1 0-4.4m6.5-4.5a1.2 1.2 0 1 0 0 2.4a1.2 1.2 0 0 0 0-2.4Z"/></svg>
+                    </a>
+                    <a href="#" class="text-colmena-dark hover:text-colmena-yellow transition duration-300 text-3xl">
+                        <!-- Icono de Facebook (ejemplo) -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.776-3.89c1.094 0 2.24.195 2.24.195v2.453H15.83c-1.226 0-1.628.767-1.628 1.563V12h2.773l-.443 2.891h-2.33V22C18.343 21.128 22 16.991 22 12c0-5.523-4.477-10-10-10"/></svg>
+                    </a>
+                    <a href="#" class="text-colmena-dark hover:text-colmena-yellow transition duration-300 text-3xl">
+                        <!-- Icono de LinkedIn (ejemplo) -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.42-1.52 1.17-1.52c.74 0 1.1.58 1.1 1.52v4.93zM7 9.5c-.82 0-1.48-.66-1.48-1.48S6.18 6.5 7 6.5s1.48.66 1.48 1.48S7.82 9.5 7 9.5zm-.74 4.5H7.74v8.37H6.26z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer class="bg-colmena-yellow py-8 text-colmena-dark text-center shadow-inner">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2025 Colmena. Todos los derechos reservados.</p>
+            <p class="text-sm mt-2">Diseñado con 💛 por Colmena.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript para el formulario de contacto (simulado)
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita el envío real del formulario
+
+            const formMessage = document.getElementById('formMessage');
+            formMessage.classList.remove('hidden');
+            formMessage.classList.remove('text-red-600');
+            formMessage.classList.add('text-green-600');
+            formMessage.textContent = '¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.';
+
+            // Opcional: Limpiar el formulario después de un tiempo
+            setTimeout(() => {
+                this.reset();
+                formMessage.classList.add('hidden');
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
